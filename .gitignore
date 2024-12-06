@@ -4,6 +4,7 @@ __*.ipynb
 .credentials.json
 .data*.csv
 dev/*
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
