@@ -25,7 +25,7 @@ class GoogleSheet:
     def __init__(self, workbook_id, sheet_name):
         self._workbook_id = workbook_id
         self._sheet_name = sheet_name
-        self._token_path = rf'{get_env_variable('PIPELINEPATH')}/token.json'
+        self._token_path = rf'{get_env_variable('PIPELINEPATH')}/.token.json'
         self._scope = ["https://www.googleapis.com/auth/spreadsheets"]
         self._sheet = None
 
