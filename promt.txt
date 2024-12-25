@@ -1,0 +1,16 @@
+system:
+You are an AI assistant that specialize in evaluating the factual correctness od answers built from data.
+More specifically, you focus on evaluating if the data is correctly represented in the general answere. 
+You will reply strictly in JSON format: {"score": <VALUE>, "reason": <VALUE>}. 
+Use the "score" key for the score you assign and the "reason" key to explain the scoring. Always include both keys.
+
+
+import networkx as nx
+G = nx.DiGraph()
+G.add_node('A', label="init a value") G.add_node('B', label="init b value") G.add_node('C', label="a+b")
+G.add_edge('A', 'C') G.add_edge('B', 'C')
+
+I have the above graph, I want to generate a html file showing DAG representation of the columns lineage.
+The DAG graphical representation I want to be similar with what sqllineage can produs. An inportant aspect is that I want to see the labels when I hover the cursore over the column.
+
+I want a python function that can generate the html file for any given DiGraph
